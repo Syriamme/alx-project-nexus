@@ -1,52 +1,130 @@
-# ALX Project Nexus
+# E-Commerce Backend - ProDev BE
 
 ## Overview
-This repository documents key learnings, concepts, and best practices from the ProDev Backend Engineering program. It serves as a knowledge hub and reference guide for both current and future learners while fostering collaboration between backend and frontend development teams.
+The E-Commerce Backend project simulates a real-world development environment, emphasizing scalability, security, and performance. This backend system supports an e-commerce product catalog, handling product data management, user authentication, and APIs for filtering, sorting, and pagination.
 
-## Project Objective
-The objective of this project is to:
-- Consolidate key learnings from the ProDev Backend Engineering program.
-- Document major backend technologies, concepts, challenges, and solutions.
-- Serve as a reference guide for both current and future learners.
-- Foster collaboration between frontend and backend learners.
+## Project Goals
+- **CRUD APIs:** Build APIs for managing products, categories, and user authentication.
+- **Filtering, Sorting, Pagination:** Implement robust logic for efficient product discovery.
+- **Database Optimization:** Design a high-performance database schema to support seamless queries.
 
-## Key Technologies Covered
-- **Programming Language:** Python
-- **Web Framework:** Django
-- **API Development:** RESTful APIs, GraphQL APIs
-- **Containerization:** Docker
-- **CI/CD Pipelines:** Continuous Integration and Continuous Deployment
+## Technologies Used
+- **Django:** For building a scalable backend framework.
+- **MySQL:** As the relational database for optimized performance.
+- **JWT:** For secure user authentication.
+- **Swagger/OpenAPI:** To document and test APIs.
 
-## Important Backend Development Concepts
-- **Database Design:** Efficient schema design, normalization, and relationships.
-- **Asynchronous Programming:** Enhancing performance with async and await.
-- **Caching Strategies:** Using Redis and Memcached to optimize response times.
+## Key Features
+### 1. CRUD Operations
+- Create, read, update, and delete operations for products and categories.
+- User authentication and management features using JWT.
 
-## Challenges Faced and Solutions Implemented
-- **Challenge:** Ensuring API scalability and performance.
-  - **Solution:** Implemented caching strategies and load balancing.
-- **Challenge:** Managing background tasks efficiently.
-  - **Solution:** Used Celery with RabbitMQ for task queues.
+### 2. API Features
+- **Filtering and Sorting:** Allow users to filter products by category and sort by price.
+- **Pagination:** Implement paginated responses for large product datasets.
 
-## Best Practices and Personal Takeaways
-- **Clean Code:** Write maintainable and readable code following PEP8.
-- **API Documentation:** Use tools like Swagger and Postman for clear API documentation.
-- **Testing:** Implement unit and integration tests using PyTest and Django Test Framework.
-- **Version Control:** Use Git and follow best practices for branching and pull requests.
+### 3. API Documentation
+- Use Swagger or Postman to generate API documentation.
+- Publish hosted API docs for easy frontend consumption.
 
-## Collaboration
-- **Backend Learners:** Collaborate on API design, system architecture, and best practices.
-- **Frontend Learners:** Provide API endpoints and ensure seamless integration.
+## Implementation Process
+### Git Commit Workflow
+- `feat: set up Django project with MySQL`
+- `feat: implement user authentication with JWT`
+- `feat: add product APIs with filtering and pagination`
+- `feat: integrate Swagger documentation for API endpoints`
+- `perf: optimize database queries with indexing`
+- `docs: add API usage instructions in Swagger`
 
-## Communication Channels
-- **Discord Channel:** `#ProDevProjectNexus`
-- **GitHub:** [Repository Link](https://github.com/roridaniel/alx-project-nexus)
+## Setup and Installation
+1. **Clone the Repository:**
+```bash
+git clone https://github.com/your-repository/ecommerce-backend.git
+cd ecommerce-backend
+```
 
-## Contribution Guidelines
-- Fork the repository.
-- Create a feature branch.
-- Commit your changes with clear messages.
-- Submit a pull request.
+2. **Create and Activate Virtual Environment:**
+```bash
+python3 -m venv env
+source env/bin/activate
+```
 
-Let’s build something amazing together!
+3. **Install Dependencies:**
+```bash
+pip install -r requirements.txt
+```
+
+4. **Set Up MySQL Database:**
+```sql
+CREATE DATABASE ecommerce_db;
+```
+
+5. **Configure `.env` File:**
+```env
+DB_NAME=ecommerce_db
+DB_USER=your_db_user
+DB_PASSWORD=your_db_password
+DB_HOST=localhost
+DB_PORT=3306
+SECRET_KEY=your_secret_key
+```
+
+6. **Apply Migrations:**
+```bash
+python manage.py migrate
+```
+
+7. **Run the Server:**
+```bash
+python manage.py runserver
+```
+
+## API Endpoints
+### Authentication
+- **POST** `/api/auth/register/` – Register a new user
+- **POST** `/api/auth/login/` – Log in and receive JWT token
+
+### Products
+- **GET** `/api/products/` – List products with filtering, sorting, and pagination
+- **POST** `/api/products/` – Create a new product
+- **GET** `/api/products/<id>/` – Retrieve a single product
+- **PUT** `/api/products/<id>/` – Update a product
+- **DELETE** `/api/products/<id>/` – Delete a product
+
+### Categories
+- **GET** `/api/categories/` – List all categories
+- **POST** `/api/categories/` – Create a new category
+- **GET** `/api/categories/<id>/` – Retrieve a single category
+- **PUT** `/api/categories/<id>/` – Update a category
+- **DELETE** `/api/categories/<id>/` – Delete a category
+
+## API Documentation
+- Swagger Documentation: [Hosted Swagger API Docs](http://localhost:8000/swagger/)
+
+## Evaluation Criteria
+1. **Functionality:**
+   - CRUD APIs for products, categories, and user authentication.
+   - Effective filtering, sorting, and pagination logic.
+2. **Code Quality:**
+   - Clean, maintainable, and well-documented code.
+   - Proper database indexing for high-performance queries.
+3. **User Experience:**
+   - Comprehensive and user-friendly API documentation.
+   - Secure authentication implementation.
+4. **Version Control:**
+   - Frequent and descriptive Git commit messages.
+   - Well-organized repository structure.
+
+## Contributing
+1. Fork the repository.
+2. Create a new branch (`feature/your-feature-name`).
+3. Commit your changes (`git commit -m "feat: add new feature"`).
+4. Push to your branch (`git push origin feature/your-feature-name`).
+5. Open a Pull Request.
+
+## License
+This project is licensed under the MIT License.
+
+## Contact
+For any questions or feedback, feel free to reach out via email at [roridaniel01@gmail.com]
 
