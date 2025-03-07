@@ -31,8 +31,7 @@ SECRET_KEY = 'django-insecure-(k=j3e*p8amg8f-cc6&p5iqa#4p-ny84uh3@bw3^yku4vpq!z#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['ecommerce-api.onrender.com']
 
 
 # Application definition
@@ -147,5 +146,3 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ],
 }
-
-ALLOWED_HOSTS = ['alx-project-nexus-341u.onrender.com']
