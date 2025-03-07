@@ -147,3 +147,5 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ],
 }
+
+ALLOWED_HOSTS = ['alx-project-nexus-341u.onrender.com']
