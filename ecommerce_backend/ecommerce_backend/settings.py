@@ -26,7 +26,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-ALLOWED_HOSTS = ['alx-project-nexus-pi5u.onrender.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['alx-project-nexus-pi5u.onrender.com', 'localhost', '0.0.0.0', '*']
 
 # Application definition
 
