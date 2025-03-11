@@ -26,7 +26,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-ALLOWED_HOSTS = ['alx-project-nexus-pi5u.onrender.com', 'localhost', '0.0.0.0', '*']
+ALLOWED_HOSTS = ['alx-project-nexus-pi5u.onrender.com', 'localhost', '0.0.0.0', '127.0.0.1']
 
 # Application definition
 
@@ -135,8 +135,5 @@ AUTH_USER_MODEL = 'accounts.User'
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
-    ],
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated',
-    ],
+    ]
 }
